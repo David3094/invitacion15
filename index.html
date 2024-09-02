@@ -17,7 +17,6 @@
         }
 
         .card {
-            position: relative;
             background-image: url('imagen_tarjeta.jpg');
             background-size: cover;
             background-position: center;
@@ -27,37 +26,32 @@
             padding: 15px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Los botones se alinean en la parte inferior */
         }
 
         .button-container {
-            position: absolute;
-            top: 75%; /* Ajusta la posición vertical según sea necesario */
-            left: 70%;
-            transform: translate(-50%, -50%);
+            width: 100%;
+            padding: 10px 0;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            width: 90%;
-            padding: 0 10px;
+            gap: 10px;
         }
 
         .button {
             background-color: #E6B4F6;
             border: none;
             color: white;
-            padding: 10px 0; /* Ajusta el padding superior e inferior */
-            line-height: 1.4; /* Ajusta el line-height para centrar el texto verticalmente */
+            padding: 10px;
             text-align: center;
             text-decoration: none;
-            font-size: 10px;
+            font-size: 12px;
             cursor: pointer;
             border-radius: 5px;
-            margin: 5px 0; /* Espacio entre los botones en la columna */
-            width: 100%; /* Hacer que los botones ocupen todo el ancho del contenedor */
+            width: 100%; /* Los botones ocupan todo el ancho del contenedor */
             max-width: 200px; /* Limita el ancho máximo de los botones */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin: 0 auto; /* Centra los botones horizontalmente */
         }
 
         .button:hover {
@@ -65,13 +59,6 @@
         }
 
         /* Media queries para tamaños más pequeños */
-        @media (max-width: 768px) {
-            .button {
-                font-size: 9px;
-                padding: 5px 8px;
-            }
-        }
-
         @media (max-width: 480px) {
             .card {
                 width: 90%;
@@ -80,14 +67,12 @@
             }
 
             .button-container {
-                top: 85%;
-                padding: 0 5px;
+                padding: 5px 0;
             }
 
             .button {
-                font-size: 8px;
-                padding: 4px 6px;
-                margin: 0 2px; /* Reduce el espacio entre los botones */
+                font-size: 10px;
+                padding: 8px;
             }
         }
     </style>
@@ -96,14 +81,12 @@
 
     <div class="card">
         <div class="button-container">
-            <!-- Enlace para ver la ubicación en Google Maps -->
+            <!-- Enlace para ver la ubicación en Waze -->
             <a href="https://waze.com/ul/hd42w1ev59" class="button">Ver ubicación en Waze</a>
-             <!-- Enlace para confirmar asistencia por Whatsapp -->
-             <a href="https://wa.me/50379605436?text=Hola,%20confirmo%20mi%20asistencia%20para%20celebrar%20los%20XV%20años%20de%20Marifer.%20¡Nos%20vemos%20pronto!" class="button">Confirmar asistencia</a>
+            <!-- Enlace para confirmar asistencia por WhatsApp -->
+            <a href="https://wa.me/50379605436?text=Hola,%20confirmo%20mi%20asistencia%20para%20celebrar%20los%20XV%20años%20de%20Marifer.%20¡Nos%20vemos%20pronto!" class="button">Confirmar asistencia</a>
             <!-- Enlace para agregar el evento al calendario de Google -->
             <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=15+Años+Mafer&dates=20240921T230000Z/20240922T050000Z" class="button">Agendar en calendario</a>
-           
-            
         </div>
     </div>
 
